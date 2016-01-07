@@ -1,0 +1,19 @@
+
+<h1 class="jumbotron text-center">{{questionData.title}}</h1>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="list-group" >
+            <li class="list-group-item" ng-repeat="data in answer">
+                <div class="list-group-item list-group-item-success" ng-show="data.is_accepted">Accepted!</div>
+                <div class="list-group-item"><b><h1>{{data.owner.display_name}}</h1></b><hr>
+                    <div ng-bind-html="data.body"></div></div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+    <div ng-show="answer.length < 1">
+        <div class="list-group-item list-group-item-success" >Sorry no data!</div>
+            </div>
+</div>
